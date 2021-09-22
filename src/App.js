@@ -1,14 +1,10 @@
 import { Container, Row } from "react-bootstrap";
-import BookComponent from "./components/BookComponent";
-
-function App() {
+import BookList from "./components/books/BookList"
+const App = () => {
   return (
     <Container>
       <Row>
-        <BookComponent title="Warkop DKI" description="Warkop DKI Reborn" variant="warning" />
-        <BookComponent title="Warkop DKI" description="Warkop DKI Reborn" variant="warning" />
-        <BookComponent title="Warkop DKI" description="Warkop DKI Reborn" variant="warning" />
-        <BookComponent title="Warkop DKI" description="Warkop DKI Reborn" variant="warning" />
+        <BookList />
       </Row>
     </Container>
   );
