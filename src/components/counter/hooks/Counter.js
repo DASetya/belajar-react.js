@@ -1,9 +1,14 @@
 import React from 'react'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import {Col} from 'react-bootstrap'
 const Counter = () => {
 
     const [count, setCount] = useState(1)
+    
+    useEffect(() => {
+        // logic
+        console.log('useEffect called');
+    })
     const increment = () => {
         setCount(count+1);
     }
