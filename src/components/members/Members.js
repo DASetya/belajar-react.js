@@ -9,6 +9,7 @@ const Members = () => {
     firstName: "Dimas",
     lastName: "Arif",
     username: "dasetya",
+    email: "dimasarifsetyawan@gmail.com",
     password: "default"
   }]);
   const eventCreateMember = (member) => {
