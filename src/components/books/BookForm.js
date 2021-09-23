@@ -3,7 +3,6 @@ import { Container, Row, Form, Button, Col } from "react-bootstrap";
 
 const BookForm = (props) => {
   return (
-    <section className="py-5 container mt-5">
       <Row>
         <Col>
           <h3 className="mt-5">Book Form Component</h3>
@@ -41,7 +40,6 @@ const BookForm = (props) => {
           </Form>
         </Col>
       </Row>
-    </section>
   );
 };
 export default BookForm;

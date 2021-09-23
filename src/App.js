@@ -9,21 +9,12 @@ import Home from "./pages/Home";
 import Footer from "./pages/template/Footer";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import BookForm from "./components/books/BookForm";
+import MemberList from "./components/members/MemberList";
+import MemberForm from "./components/members/MemberForm"
+import Routing from "./pages/Routing";
 const App = () => {
   return (
-    <>
-      <BrowserRouter>
-        <Navigation />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/books" exact component={BookList} />
-          <Route path="/books/add" exact component={BookForm} /> 
-          <Route path="/members" component={Members} />
-          <Route path="/members" component={Members} />
-        </Switch>
-        <Footer />
-      </BrowserRouter>
-    </>
+    <Routing />
   );
 };
 

@@ -1,10 +1,10 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Col } from "react-bootstrap";
 import './MemberComponent.css'
 const MemberComponent = ({firstName, lastName, username, email, password}) => {
   return (
-    <div className="col-lg-3">
-      <Card className="member-card text-center mt-5 mb-5">
+    <Col lg={3} md={6}>
+      <Card className="member-card text-center mb-5">
         <Card.Header>{firstName} {lastName}</Card.Header>
         <Card.Body>
           <Card.Title>{firstName}</Card.Title>
@@ -14,7 +14,7 @@ const MemberComponent = ({firstName, lastName, username, email, password}) => {
           <Card.Text>{password}</Card.Text>
         </Card.Body>
       </Card>
-    </div>
+    </Col>
   );
 };
 
