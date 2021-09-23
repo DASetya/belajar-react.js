@@ -1,11 +1,11 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Col } from "react-bootstrap";
 import './BookComponent.css'
 
 const BookComponent = ({title, description, image, variant}) => {
   return (
-    <div className="col-lg-3">
-      <Card className="book-card mt-5">
+    <Col lg={3} md={6}>
+      <Card className="book-card mb-3">
         <Card.Img variant="top" className="book-img" src={image} />
         <Card.Body className="book-desc">
           <Card.Title>{title}</Card.Title>
@@ -13,7 +13,7 @@ const BookComponent = ({title, description, image, variant}) => {
           <Button variant={variant}>Detail</Button>
         </Card.Body>
       </Card>
-    </div>
+    </Col>
   );
 };
 

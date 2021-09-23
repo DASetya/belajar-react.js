@@ -27,7 +27,7 @@ const MemberForm = (props) => {
   };
   return (
     <div>
-      <h3>Member Form Component</h3>
+      <h3 className="mt-5" >Member Form Component</h3>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicFirstName">
           <Form.Label>First Name</Form.Label>

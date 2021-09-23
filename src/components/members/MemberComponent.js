@@ -4,7 +4,7 @@ import './MemberComponent.css'
 const MemberComponent = ({firstName, lastName, username, email, password}) => {
   return (
     <div className="col-lg-3">
-      <Card className="member-card text-center mt-5">
+      <Card className="member-card text-center mt-5 mb-5">
         <Card.Header>{firstName} {lastName}</Card.Header>
         <Card.Body>
           <Card.Title>{firstName}</Card.Title>
