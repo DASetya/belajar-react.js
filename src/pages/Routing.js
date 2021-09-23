@@ -9,6 +9,7 @@ import Home from "./Home";
 import Footer from "./template/Footer";
 import BookDetail from "../components/books/BookDetail";
 import NotFound from "../components/404/NotFound";
+import { Redirect } from "react-router";
 
 const Routing = () => {
   return (
@@ -22,7 +23,8 @@ const Routing = () => {
           <Route path="/books/:id" component={BookDetail} />
           <Route path="/members" exact component={MemberList} />
           <Route path="/members/add" exact component={MemberForm} />
-          <Route path="*" component={NotFound} />
+          {/* <Route path="/404" component={NotFound} />
+          <Redirect from="*" to="/404" /> */}
         </section>
       </Switch>
       <Footer />
