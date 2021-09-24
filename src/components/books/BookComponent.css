@@ -9,6 +9,6 @@
     object-fit: cover;
 }
 
-.book-desc{
-    min-height: 382px;
+.book-body{
+    min-height: 252px;
 }

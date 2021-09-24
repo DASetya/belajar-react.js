@@ -15,8 +15,8 @@ const Routing = () => {
   return (
     <BrowserRouter>
       <Navigation />
-      <Switch>
-        <section className="py-5 container mt-5">
+      <section className="py-5 container mt-5">
+        <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/books" exact component={BookList} />
           <Route path="/books/add" exact component={BookForm} />
@@ -25,8 +25,8 @@ const Routing = () => {
           <Route path="/members/add" exact component={MemberForm} />
           {/* <Route path="/404" component={NotFound} />
           <Redirect from="*" to="/404" /> */}
-        </section>
-      </Switch>
+        </Switch>
+      </section>
       <Footer />
     </BrowserRouter>
   );

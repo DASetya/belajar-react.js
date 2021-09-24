@@ -11,8 +11,7 @@ export const bookSchema = yup.object().shape({
     .min(1, "Publisher must be at least 1 character"),
   year: yup
     .number()
-    .required("Year is required")
-    .max(4, "year must be 4 numbers"),
+    .required("Year is required"),
   description: yup
     .string()
     .required("Description is required")
