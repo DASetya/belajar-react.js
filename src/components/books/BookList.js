@@ -3,19 +3,29 @@ import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import BookComponent from "./BookComponent";
-import { getListBook } from "../../api/bookService";
+import { getListBook, deleteBook } from "../../api/bookService";
 import { tmpImage } from "../../api/BookApi";
 
 const BookList = ({match}) => {
   const [books, setBooks] = useState([]);
   const {path} = match;
+  const {modalShow, setModalShow} = useState({
+    
+  })
 
   useEffect(() => {
     getListBook()
     .then((response) =>{
       setBooks(response.data)
     })
-  }, [])
+  }, [books])
+
+  const bookDelete = (id) => {
+    return deleteBook(id)
+    .then(response => {
+
+    })
+  }
 
   return (
     <div>
@@ -34,9 +44,9 @@ const BookList = ({match}) => {
             description={book.description}
             purchaseAmount={book.purchaseAmount}
             price={book.price}
-            image={book.tmpImage}
+            image={tmpImage}
             path={path}
-
+            handleDelete={bookDelete}
           />
         ))}
         {

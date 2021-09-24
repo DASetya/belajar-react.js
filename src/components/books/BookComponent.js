@@ -11,6 +11,8 @@ const BookComponent = ({
   variant,
   path,
   price,
+  handleDelete,
+  purchaseAmount,
 }) => {
   return (
     <Col lg={3} md={6}>
@@ -33,12 +35,15 @@ const BookComponent = ({
               >
                 Update
               </Link>
-              <Link
-                to={`${path}/${bookId}`}
-                className="btn btn-sm btn-outline-danger"
-              >
-                Delete
-              </Link>
+              {
+                purchaseAmount > 0 || purchaseAmount === null ?
+                <button onClick={() => handleDelete(bookId)} className="btn btn-sm btn-outline-danger" disabled="true" >
+                  Delete
+                </button> :
+                <button onClick={() => handleDelete(bookId) } className="btn btn-sm btn-outline-danger" >
+                  Delete
+                </button>
+              }
             </ButtonGroup>
             <small className="text-muted">Rp.{price}</small>
           </div>

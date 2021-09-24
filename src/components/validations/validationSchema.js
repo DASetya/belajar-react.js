@@ -1,35 +1,37 @@
 import * as yup from "yup";
 
 export const bookSchema = yup.object().shape({
-  title: yup
-    .string()
-    .required("Title is required")
-    .min(3, "Title must be at least 3 characters"),
-  publisher: yup
-    .string()
-    .required("Publisher is required")
-    .min(1, "Publisher must be at least 1 character"),
-  year: yup
-    .number()
-    .required("Year is required"),
-  description: yup
-    .string()
-    .required("Description is required")
-    .min(10, "Description must be at least 10 characters"),
-  page: yup
-    .number()
-    .required("Page is required")
-    .min(1, "Page must be at least 1 page"),
-  price: yup
-    .number()
-    .required("Price is required")
-    .min(1, "Price must be at least Rp. 0"),
-  language: yup
-    .string()
-    .required("Language is required")
-    .min(3, "Language must be at least 3 characters"),
-  stock: yup
-    .number()
-    .required("Stock is required")
-    .min(1, "Stock must be at least 0"),
-});
+  title:
+    yup.string()
+      .required('Title is required')
+      .min(6, 'title must be at least 6 characters'),
+  description:
+    yup.string()
+      .required('Description is required')
+      .min(10, 'description must be at least 10 characters'),
+  year:
+    yup.string()
+      .required('Year is required')
+      .max(4, 'year must be at max 4 characters'),
+  pages:
+    yup.string()
+      .required('Pages is required')
+      .min(1, 'pages must be at min 0 pages'),
+  language:
+    yup.string()
+      .required('Language is required'),
+  publisher:
+    yup.string()
+      .required('Publisher is required'),
+  price: yup.string()
+    .required('Price is require')
+    .min(0, 'price can not be 0'),
+  purchaseAmount:
+    yup.string()
+      .min(0, 'price can not be 0'),
+  stock:
+    yup.string()
+      .required('Stock is require')
+      .min(0, 'Stock can not be 0')
+})
+

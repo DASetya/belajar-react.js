@@ -20,6 +20,7 @@ const Routing = () => {
           <Route path="/" exact component={Home} />
           <Route path="/books" exact component={BookList} />
           <Route path="/books/add" exact component={BookForm} />
+          <Route path="/books/edit/:id" exact component={BookForm} />
           <Route path="/books/:id" component={BookDetail} />
           <Route path="/members" exact component={MemberList} />
           <Route path="/members/add" exact component={MemberForm} />
