@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { Form, Button, Row, Col, Card } from "react-bootstrap";
 import { createMember } from "../../api/MemberService";
 import { memberSchema } from "../validations/validationSchema";
+import { Link } from "react-router-dom";
 
 const MemberForm = ({history, match}) => {
   const { id } = match.params;
@@ -107,7 +108,7 @@ const MemberForm = ({history, match}) => {
               <Form.Label>Status</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Enter Status"
+                placeholder="Enter Status 0 for inactive and 1 for active"
                 name="status"
                 {...register("status")}
                 className={`form-control ${
@@ -120,9 +121,9 @@ const MemberForm = ({history, match}) => {
             <Button variant="success" type="submit">
               Save
             </Button>
-            <Button variant="warning" type="cancel" className="mx-3">
-            Cancel
-            </Button>
+            <Link to="/members" className="btn btn-warning mx-2">
+              Cancel
+            </Link>
           </Form>
         </Card>
       </Row>

@@ -81,7 +81,7 @@ const MemberList = (match) => {
 }
   
   return (
-    <section className="py-5 container mt-5"> 
+    <section className="py-5 container"> 
     <h3>Member Page</h3>
     <Link to= "/members/add" className="btn btn-sm btn-success mb-3 text-uppercase">Add Member</Link>
   

@@ -53,6 +53,7 @@ export const memberSchema = yup.object().shape({
     .required("Password Required")
     .min(8, "At least 8 char"),
   status: yup
-    .number(),
+    .number()
+    .required("Status required, 0 for inactive and 1 for active"),
 });
 
